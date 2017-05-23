@@ -1,1 +1,3 @@
 vendor
+application/config/config.development.php
+.htaccess
