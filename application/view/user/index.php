@@ -1,5 +1,6 @@
 <div class="container">
     <h1>UserController/showProfile</h1>
+    <?php var_dump($this); ?>
 
     <div class="box">
         <h2>Your profile</h2>
