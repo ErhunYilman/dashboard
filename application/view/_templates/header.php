@@ -9,8 +9,8 @@
     <!-- META -->
     <meta charset="utf-8">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <!-- send empty favicon fallback to prevent user's browser hitting the server for lots of favicon requests resulting in 404s -->
-    <link rel="icon" href="data:;base64,=">
+    <!-- Favo Icon -->
+    <link rel="icon" type="image/png" href="<?php echo Config::get('URL'); ?>favicon.png"/>
     <!-- bootstrap 3.0.2 -->
     <link href="<?php echo Config::get('URL'); ?>css/bootstrap.min.css?_=<?=md5($date)?>" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->

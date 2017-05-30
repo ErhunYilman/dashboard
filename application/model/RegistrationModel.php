@@ -124,7 +124,7 @@ class RegistrationModel
         }
 
         // if username is too short (2), too long (64) or does not fit the pattern (aZ09)
-        if (!preg_match('/^[a-zA-Z0-9]{2,64}$/', $user_name)) {
+        if (!preg_match('/^[a-zA-Z0-9,.\/-]{2,64}$/', $user_name)) {
             Session::add('feedback_negative', Text::get('FEEDBACK_USERNAME_DOES_NOT_FIT_PATTERN'));
             return false;
         }
