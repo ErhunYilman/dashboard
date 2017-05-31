@@ -94,6 +94,10 @@ html, body {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+
+.demo-navigation a i{
+  color: #263238 !important;
+}
 .demo-layout .demo-navigation .mdl-navigation__link {
   display: -webkit-box !important;
   display: -webkit-flex !important;
@@ -112,7 +116,7 @@ html, body {
   font-weight: 500;
 }
 .demo-layout .demo-navigation .mdl-navigation__link:hover {
-  background-color: #00BCD4;
+  background-color: #9E9E9E;
   color: #37474F;
 }
 .demo-navigation .mdl-navigation__link .material-icons {
