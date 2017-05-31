@@ -1,889 +1,184 @@
-
-    <!-- header logo: style can be found in header.less -->
-    <header class="header">
-        <a href="index.html" class="logo">
-            <!-- Add the class icon to your logo image or logo icon to add the margining -->
-            AdminLTE
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-            <!-- Sidebar toggle button-->
-            <a href="#" id="menu-toggle" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
-                <!-- <span class="sr-only">Toggle navigation</span>
-                <span id="cross" class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span> -->
-                <div id="hamburger">
-		            <span></span>
-		            <span></span>
-		            <span></span>
-		          </div>
-		          <div id="cross">
-		            <span></span>
-		            <span></span>
-		          </div>
-            </a>
-            <div class="navbar-right">
-                <ul class="nav navbar-nav">
-                    <!-- Messages: style can be found in dropdown.less-->
-                    <li class="dropdown messages-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-envelope"></i>
-                            <span class="label label-success">4</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 4 messages</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
-                                            </div>
-                                            <h4>
-                                                Support Team
-                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li><!-- end message -->
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="img/avatar2.png" class="img-circle" alt="user image"/>
-                                            </div>
-                                            <h4>
-                                                AdminLTE Design Team
-                                                <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="img/avatar.png" class="img-circle" alt="user image"/>
-                                            </div>
-                                            <h4>
-                                                Developers
-                                                <small><i class="fa fa-clock-o"></i> Today</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="img/avatar2.png" class="img-circle" alt="user image"/>
-                                            </div>
-                                            <h4>
-                                                Sales Department
-                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="img/avatar.png" class="img-circle" alt="user image"/>
-                                            </div>
-                                            <h4>
-                                                Reviewers
-                                                <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">See All Messages</a></li>
-                        </ul>
-                    </li>
-                    <!-- Notifications: style can be found in dropdown.less -->
-                    <li class="dropdown notifications-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-warning"></i>
-                            <span class="label label-warning">10</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 10 notifications</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="ion ion-ios7-people info"></i> 5 new members joined today
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-warning danger"></i> Very long description here that may not fit into the page and may cause design problems
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users warning"></i> 5 new members joined
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="ion ion-ios7-cart success"></i> 25 sales made
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ion ion-ios7-person danger"></i> You changed your username
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">View all</a></li>
-                        </ul>
-                    </li>
-                    <!-- Tasks: style can be found in dropdown.less -->
-                    <li class="dropdown tasks-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-tasks"></i>
-                            <span class="label label-danger">9</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 9 tasks</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Design some buttons
-                                                <small class="pull-right">20%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">20% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li><!-- end task item -->
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Create a nice theme
-                                                <small class="pull-right">40%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">40% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li><!-- end task item -->
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Some task I need to do
-                                                <small class="pull-right">60%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">60% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li><!-- end task item -->
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Make beautiful transitions
-                                                <small class="pull-right">80%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">80% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li><!-- end task item -->
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="#">View all tasks</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- User Account: style can be found in dropdown.less -->
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="glyphicon glyphicon-user"></i>
-                            <span>Jane Doe <i class="caret"></i></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- User image -->
-                            <li class="user-header bg-light-blue">
-                                <img src="img/avatar3.png" class="img-circle" alt="User Image" />
-                                <p>
-                                    Jane Doe - Web Developer
-                                    <small>Member since Nov. 2012</small>
-                                </p>
-                            </li>
-                            <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Followers</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Sales</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Friends</a>
-                                </div>
-                            </li>
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Home</span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+        <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" id="search">
+          <label class="mdl-textfield__label" for="search">Enter your query...</label>
+        </div>
+      </div>
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+        <i class="material-icons">more_vert</i>
+      </button>
+      <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+        <li class="mdl-menu__item">About</li>
+        <li class="mdl-menu__item">Contact</li>
+        <li class="mdl-menu__item">Legal information</li>
+      </ul>
+    </div>
+  </header>
+  <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+    <header class="demo-drawer-header">
+      <img src="images/user.jpg" class="demo-avatar">
+      <div class="demo-avatar-dropdown">
+        <span>hello@example.com</span>
+        <div class="mdl-layout-spacer"></div>
+        <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+          <i class="material-icons" role="presentation">arrow_drop_down</i>
+          <span class="visuallyhidden">Accounts</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+          <li class="mdl-menu__item">hello@example.com</li>
+          <li class="mdl-menu__item">info@example.com</li>
+          <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+        </ul>
+      </div>
     </header>
-    <div class="wrapper row-offcanvas row-offcanvas-left">
-        <!-- Left side column. contains the logo and sidebar -->
-        <aside class="left-side sidebar-offcanvas">
-            <!-- sidebar: style can be found in sidebar.less -->
-            <section class="sidebar">
-                <!-- Sidebar user panel -->
-                <div class="user-panel">
-                    <div class="pull-left image">
-                        <img src="img/avatar3.png" class="img-circle" alt="User Image" />
-                    </div>
-                    <div class="pull-left info">
-                        <p>Hello, Jane</p>
-
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                    </div>
-                </div>
-                <!-- search form -->
-                <form action="#" method="get" class="sidebar-form">
-                    <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Search..."/>
-                        <span class="input-group-btn">
-                            <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
-                        </span>
-                    </div>
-                </form>
-                <!-- /.search form -->
-                <!-- sidebar menu: : style can be found in sidebar.less -->
-                <ul class="sidebar-menu">
-                    <li class="active">
-                        <a href="index.html">
-                            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/widgets.html">
-                            <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
-                        </a>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-bar-chart-o"></i>
-                            <span>Charts</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                            <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                            <li><a href="pages/charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
-                        </ul>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-laptop"></i>
-                            <span>UI Elements</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="pages/UI/general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
-                            <li><a href="pages/UI/icons.html"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                            <li><a href="pages/UI/buttons.html"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                            <li><a href="pages/UI/sliders.html"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                            <li><a href="pages/UI/timeline.html"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
-                        </ul>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-edit"></i> <span>Forms</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="pages/forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                            <li><a href="pages/forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                            <li><a href="pages/forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>
-                        </ul>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-table"></i> <span>Tables</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="pages/tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                            <li><a href="pages/tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="pages/calendar.html">
-                            <i class="fa fa-calendar"></i> <span>Calendar</span>
-                            <small class="badge pull-right bg-red">3</small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/mailbox.html">
-                            <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                            <small class="badge pull-right bg-yellow">12</small>
-                        </a>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-folder"></i> <span>Examples</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="pages/examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                            <li><a href="pages/examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                            <li><a href="pages/examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                            <li><a href="pages/examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                            <li><a href="pages/examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                            <li><a href="pages/examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <!-- /.sidebar -->
-        </aside>
-
-        <!-- Right side column. Contains the navbar and content of the page -->
-        <aside class="right-side">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <h1>
-                    Dashboard
-                    <small>Control panel</small>
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li class="active">Dashboard</li>
-                </ol>
-            </section>
-
-            <!-- Main content -->
-            <section class="content">
-
-                <!-- Small boxes (Stat box) -->
-                <div class="row">
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-aqua">
-                            <div class="inner">
-                                <h3>
-                                    150
-                                </h3>
-                                <p>
-                                    New Orders
-                                </p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-bag"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">
-                                More info <i class="fa fa-arrow-circle-right"></i>
-                            </a>
-                        </div>
-                    </div><!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-green">
-                            <div class="inner">
-                                <h3>
-                                    53<sup style="font-size: 20px">%</sup>
-                                </h3>
-                                <p>
-                                    Bounce Rate
-                                </p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-stats-bars"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">
-                                More info <i class="fa fa-arrow-circle-right"></i>
-                            </a>
-                        </div>
-                    </div><!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-yellow">
-                            <div class="inner">
-                                <h3>
-                                    44
-                                </h3>
-                                <p>
-                                    User Registrations
-                                </p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-person-add"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">
-                                More info <i class="fa fa-arrow-circle-right"></i>
-                            </a>
-                        </div>
-                    </div><!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-red">
-                            <div class="inner">
-                                <h3>
-                                    65
-                                </h3>
-                                <p>
-                                    Unique Visitors
-                                </p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-pie-graph"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">
-                                More info <i class="fa fa-arrow-circle-right"></i>
-                            </a>
-                        </div>
-                    </div><!-- ./col -->
-                </div><!-- /.row -->
-
-                <!-- top row -->
-                <div class="row">
-                    <div class="col-xs-12 connectedSortable">
-
-                    </div><!-- /.col -->
-                </div>
-                <!-- /.row -->
-
-                <!-- Main row -->
-                <div class="row">
-                    <!-- Left col -->
-                    <section class="col-lg-6 connectedSortable">
-                        <!-- Box (with bar chart) -->
-                        <div class="box box-danger" id="loading-example">
-                            <div class="box-header">
-                                <!-- tools box -->
-                                <div class="pull-right box-tools">
-                                    <button class="btn btn-danger btn-sm refresh-btn" data-toggle="tooltip" title="Reload"><i class="fa fa-refresh"></i></button>
-                                    <button class="btn btn-danger btn-sm" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-                                    <button class="btn btn-danger btn-sm" data-widget='remove' data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
-                                </div><!-- /. tools -->
-                                <i class="fa fa-cloud"></i>
-
-                                <h3 class="box-title">Server Load</h3>
-                            </div><!-- /.box-header -->
-                            <div class="box-body no-padding">
-                                <div class="row">
-                                    <div class="col-sm-7">
-                                        <!-- bar chart -->
-                                        <div class="chart" id="bar-chart" style="height: 250px;"></div>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <div class="pad">
-                                            <!-- Progress bars -->
-                                            <div class="clearfix">
-                                                <span class="pull-left">Bandwidth</span>
-                                                <small class="pull-right">10/200 GB</small>
-                                            </div>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
-                                            </div>
-
-                                            <div class="clearfix">
-                                                <span class="pull-left">Transfered</span>
-                                                <small class="pull-right">10 GB</small>
-                                            </div>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-red" style="width: 70%;"></div>
-                                            </div>
-
-                                            <div class="clearfix">
-                                                <span class="pull-left">Activity</span>
-                                                <small class="pull-right">73%</small>
-                                            </div>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-light-blue" style="width: 70%;"></div>
-                                            </div>
-
-                                            <div class="clearfix">
-                                                <span class="pull-left">FTP</span>
-                                                <small class="pull-right">30 GB</small>
-                                            </div>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-aqua" style="width: 70%;"></div>
-                                            </div>
-                                            <!-- Buttons -->
-                                            <p>
-                                                <button class="btn btn-default btn-sm"><i class="fa fa-cloud-download"></i> Generate PDF</button>
-                                            </p>
-                                        </div><!-- /.pad -->
-                                    </div><!-- /.col -->
-                                </div><!-- /.row - inside box -->
-                            </div><!-- /.box-body -->
-                            <div class="box-footer">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                        <input type="text" class="knob" data-readonly="true" value="80" data-width="60" data-height="60" data-fgColor="#f56954"/>
-                                        <div class="knob-label">CPU</div>
-                                    </div><!-- ./col -->
-                                    <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                        <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#00a65a"/>
-                                        <div class="knob-label">Disk</div>
-                                    </div><!-- ./col -->
-                                    <div class="col-xs-4 text-center">
-                                        <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#3c8dbc"/>
-                                        <div class="knob-label">RAM</div>
-                                    </div><!-- ./col -->
-                                </div><!-- /.row -->
-                            </div><!-- /.box-footer -->
-                        </div><!-- /.box -->
-
-                        <!-- Custom tabs (Charts with tabs)-->
-                        <div class="nav-tabs-custom">
-                            <!-- Tabs within a box -->
-                            <ul class="nav nav-tabs pull-right">
-                                <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                                <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-                                <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
-                            </ul>
-                            <div class="tab-content no-padding">
-                                <!-- Morris chart - Sales -->
-                                <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                                <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
-                            </div>
-                        </div><!-- /.nav-tabs-custom -->
-
-                        <!-- Calendar -->
-                        <div class="box box-warning">
-                            <div class="box-header">
-                                <i class="fa fa-calendar"></i>
-                                <div class="box-title">Calendar</div>
-
-                                <!-- tools box -->
-                                <div class="pull-right box-tools">
-                                    <!-- button with a dropdown -->
-                                    <div class="btn-group">
-                                        <button class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
-                                        <ul class="dropdown-menu pull-right" role="menu">
-                                            <li><a href="#">Add new event</a></li>
-                                            <li><a href="#">Clear events</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">View calendar</a></li>
-                                        </ul>
-                                    </div>
-                                </div><!-- /. tools -->
-                            </div><!-- /.box-header -->
-                            <div class="box-body no-padding">
-                                <!--The calendar -->
-                                <div id="calendar"></div>
-                            </div><!-- /.box-body -->
-                        </div><!-- /.box -->
-
-                        <!-- quick email widget -->
-                        <div class="box box-info">
-                            <div class="box-header">
-                                <i class="fa fa-envelope"></i>
-                                <h3 class="box-title">Quick Email</h3>
-                                <!-- tools box -->
-                                <div class="pull-right box-tools">
-                                    <button class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
-                                </div><!-- /. tools -->
-                            </div>
-                            <div class="box-body">
-                                <form action="#" method="post">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" name="emailto" placeholder="Email to:"/>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="subject" placeholder="Subject"/>
-                                    </div>
-                                    <div>
-                                        <textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="box-footer clearfix">
-                                <button class="pull-right btn btn-default" id="sendEmail">Send <i class="fa fa-arrow-circle-right"></i></button>
-                            </div>
-                        </div>
-
-                    </section><!-- /.Left col -->
-                    <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                    <section class="col-lg-6 connectedSortable">
-                        <!-- Map box -->
-                        <div class="box box-primary">
-                            <div class="box-header">
-                                <!-- tools box -->
-                                <div class="pull-right box-tools">
-                                    <button class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip" title="Date range"><i class="fa fa-calendar"></i></button>
-                                    <button class="btn btn-primary btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
-                                </div><!-- /. tools -->
-
-                                <i class="fa fa-map-marker"></i>
-                                <h3 class="box-title">
-                                    Visitors
-                                </h3>
-                            </div>
-                            <div class="box-body no-padding">
-                                <div id="world-map" style="height: 300px;"></div>
-                                <div class="table-responsive">
-                                    <!-- .table - Uses sparkline charts-->
-                                    <table class="table table-striped">
-                                        <tr>
-                                            <th>Country</th>
-                                            <th>Visitors</th>
-                                            <th>Online</th>
-                                            <th>Page Views</th>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">USA</a></td>
-                                            <td><div id="sparkline-1"></div></td>
-                                            <td>209</td>
-                                            <td>239</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">India</a></td>
-                                            <td><div id="sparkline-2"></div></td>
-                                            <td>131</td>
-                                            <td>958</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Britain</a></td>
-                                            <td><div id="sparkline-3"></div></td>
-                                            <td>19</td>
-                                            <td>417</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Brazil</a></td>
-                                            <td><div id="sparkline-4"></div></td>
-                                            <td>109</td>
-                                            <td>476</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">China</a></td>
-                                            <td><div id="sparkline-5"></div></td>
-                                            <td>192</td>
-                                            <td>437</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Australia</a></td>
-                                            <td><div id="sparkline-6"></div></td>
-                                            <td>1709</td>
-                                            <td>947</td>
-                                        </tr>
-                                    </table><!-- /.table -->
-                                </div>
-                            </div><!-- /.box-body-->
-                            <div class="box-footer">
-                                <button class="btn btn-info"><i class="fa fa-download"></i> Generate PDF</button>
-                                <button class="btn btn-warning"><i class="fa fa-bug"></i> Report Bug</button>
-                            </div>
-                        </div>
-                        <!-- /.box -->
-
-                        <!-- Chat box -->
-                        <div class="box box-success">
-                            <div class="box-header">
-                                <h3 class="box-title"><i class="fa fa-comments-o"></i> Chat</h3>
-                                <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
-                                    <div class="btn-group" data-toggle="btn-toggle" >
-                                        <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i></button>
-                                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-body chat" id="chat-box">
-                                <!-- chat item -->
-                                <div class="item">
-                                    <img src="img/avatar.png" alt="user image" class="online"/>
-                                    <p class="message">
-                                        <a href="#" class="name">
-                                            <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                                            Mike Doe
-                                        </a>
-                                        I would like to meet you to discuss the latest news about
-                                        the arrival of the new theme. They say it is going to be one the
-                                        best themes on the market
-                                    </p>
-                                    <div class="attachment">
-                                        <h4>Attachments:</h4>
-                                        <p class="filename">
-                                            Theme-thumbnail-image.jpg
-                                        </p>
-                                        <div class="pull-right">
-                                            <button class="btn btn-primary btn-sm btn-flat">Open</button>
-                                        </div>
-                                    </div><!-- /.attachment -->
-                                </div><!-- /.item -->
-                                <!-- chat item -->
-                                <div class="item">
-                                    <img src="img/avatar2.png" alt="user image" class="offline"/>
-                                    <p class="message">
-                                        <a href="#" class="name">
-                                            <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
-                                            Jane Doe
-                                        </a>
-                                        I would like to meet you to discuss the latest news about
-                                        the arrival of the new theme. They say it is going to be one the
-                                        best themes on the market
-                                    </p>
-                                </div><!-- /.item -->
-                                <!-- chat item -->
-                                <div class="item">
-                                    <img src="img/avatar3.png" alt="user image" class="offline"/>
-                                    <p class="message">
-                                        <a href="#" class="name">
-                                            <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
-                                            Susan Doe
-                                        </a>
-                                        I would like to meet you to discuss the latest news about
-                                        the arrival of the new theme. They say it is going to be one the
-                                        best themes on the market
-                                    </p>
-                                </div><!-- /.item -->
-                            </div><!-- /.chat -->
-                            <div class="box-footer">
-                                <div class="input-group">
-                                    <input class="form-control" placeholder="Type message..."/>
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-success"><i class="fa fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.box (chat box) -->
-
-                        <!-- TO DO List -->
-                        <div class="box box-primary">
-                            <div class="box-header">
-                                <i class="ion ion-clipboard"></i>
-                                <h3 class="box-title">To Do List</h3>
-                                <div class="box-tools pull-right">
-                                    <ul class="pagination pagination-sm inline">
-                                        <li><a href="#">&laquo;</a></li>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">&raquo;</a></li>
-                                    </ul>
-                                </div>
-                            </div><!-- /.box-header -->
-                            <div class="box-body">
-                                <ul class="todo-list">
-                                    <li>
-                                        <!-- drag handle -->
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <!-- checkbox -->
-                                        <input type="checkbox" value="" name=""/>
-                                        <!-- todo text -->
-                                        <span class="text">Design a nice theme</span>
-                                        <!-- Emphasis label -->
-                                        <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
-                                        <!-- General tools such as edit or delete-->
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="" name=""/>
-                                        <span class="text">Make the theme responsive</span>
-                                        <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="" name=""/>
-                                        <span class="text">Let theme shine like a star</span>
-                                        <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="" name=""/>
-                                        <span class="text">Let theme shine like a star</span>
-                                        <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="" name=""/>
-                                        <span class="text">Check your messages and notifications</span>
-                                        <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="" name=""/>
-                                        <span class="text">Let theme shine like a star</span>
-                                        <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div><!-- /.box-body -->
-                            <div class="box-footer clearfix no-border">
-                                <button class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
-                            </div>
-                        </div><!-- /.box -->
-
-                    </section><!-- right col -->
-                </div><!-- /.row (main row) -->
-
-            </section><!-- /.content -->
-        </aside><!-- /.right-side -->
-    </div><!-- ./wrapper -->
+    <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+      <a class="mdl-navigation__link" <?php if (View::checkForActiveController($filename, "index")) { echo ' class="active" '; } ?>  class="mdl-navigation__link" href="<?php echo Config::get('URL'); ?>index/index"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Index</a>
+      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
+      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
+      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
+      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
+      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
+      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
+      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
+      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Social</a>
+      <div class="mdl-layout-spacer"></div>
+      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content mdl-color--grey-100">
+    <div class="mdl-grid demo-content">
+      <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+          <use xlink:href="#piechart" mask="url(#piemask)">
+          <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan font-size="0.2" dy="-0.07">%</tspan></text>
+        </svg>
+        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+          <use xlink:href="#piechart" mask="url(#piemask)">
+          <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
+        </svg>
+        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+          <use xlink:href="#piechart" mask="url(#piemask)">
+          <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
+        </svg>
+        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+          <use xlink:href="#piechart" mask="url(#piemask)">
+          <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
+        </svg>
+      </div>
+      <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
+        <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
+          <use xlink:href="#chart">
+        </svg>
+        <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
+          <use xlink:href="#chart">
+        </svg>
+      </div>
+      <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+        <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
+            <h2 class="mdl-card__title-text">Updates</h2>
+          </div>
+          <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+            Non dolore elit adipisicing ea reprehenderit consectetur culpa.
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
+          </div>
+        </div>
+        <div class="demo-separator mdl-cell--1-col"></div>
+        <div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
+            <h3>View options</h3>
+            <ul>
+              <li>
+                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Click per object</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox2" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Views per object</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Objects selected</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Objects viewed</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--blue-grey-50">Change location</a>
+            <div class="mdl-layout-spacer"></div>
+            <i class="material-icons">location_on</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">
+    <defs>
+      <mask id="piemask" maskContentUnits="objectBoundingBox">
+        <circle cx=0.5 cy=0.5 r=0.49 fill="white">
+        <circle cx=0.5 cy=0.5 r=0.40 fill="black">
+      </mask>
+      <g id="piechart">
+        <circle cx=0.5 cy=0.5 r=0.5>
+        <path d="M 0.5 0.5 0.5 0 A 0.5 0.5 0 0 1 0.95 0.28 z" stroke="none" fill="rgba(255, 255, 255, 0.75)">
+      </g>
+    </defs>
+  </svg>
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 250" style="position: fixed; left: -1000px; height: -1000px;">
+    <defs>
+      <g id="chart">
+        <g id="Gridlines">
+          <line fill="#888888" stroke="#888888" stroke-miterlimit="10" x1="0" y1="27.3" x2="468.3" y2="27.3">
+          <line fill="#888888" stroke="#888888" stroke-miterlimit="10" x1="0" y1="66.7" x2="468.3" y2="66.7">
+          <line fill="#888888" stroke="#888888" stroke-miterlimit="10" x1="0" y1="105.3" x2="468.3" y2="105.3">
+          <line fill="#888888" stroke="#888888" stroke-miterlimit="10" x1="0" y1="144.7" x2="468.3" y2="144.7">
+          <line fill="#888888" stroke="#888888" stroke-miterlimit="10" x1="0" y1="184.3" x2="468.3" y2="184.3">
+        </g>
+        <g id="Numbers">
+          <text transform="matrix(1 0 0 1 485 29.3333)" fill="#888888" font-family="'Roboto'" font-size="9">500</text>
+          <text transform="matrix(1 0 0 1 485 69)" fill="#888888" font-family="'Roboto'" font-size="9">400</text>
+          <text transform="matrix(1 0 0 1 485 109.3333)" fill="#888888" font-family="'Roboto'" font-size="9">300</text>
+          <text transform="matrix(1 0 0 1 485 149)" fill="#888888" font-family="'Roboto'" font-size="9">200</text>
+          <text transform="matrix(1 0 0 1 485 188.3333)" fill="#888888" font-family="'Roboto'" font-size="9">100</text>
+          <text transform="matrix(1 0 0 1 0 249.0003)" fill="#888888" font-family="'Roboto'" font-size="9">1</text>
+          <text transform="matrix(1 0 0 1 78 249.0003)" fill="#888888" font-family="'Roboto'" font-size="9">2</text>
+          <text transform="matrix(1 0 0 1 154.6667 249.0003)" fill="#888888" font-family="'Roboto'" font-size="9">3</text>
+          <text transform="matrix(1 0 0 1 232.1667 249.0003)" fill="#888888" font-family="'Roboto'" font-size="9">4</text>
+          <text transform="matrix(1 0 0 1 309 249.0003)" fill="#888888" font-family="'Roboto'" font-size="9">5</text>
+          <text transform="matrix(1 0 0 1 386.6667 249.0003)" fill="#888888" font-family="'Roboto'" font-size="9">6</text>
+          <text transform="matrix(1 0 0 1 464.3333 249.0003)" fill="#888888" font-family="'Roboto'" font-size="9">7</text>
+        </g>
+        <g id="Layer_5">
+          <polygon opacity="0.36" stroke-miterlimit="10" points="0,223.3 48,138.5 154.7,169 211,88.5
+          294.5,80.5 380,165.2 437,75.5 469.5,223.3 	">
+        </g>
+        <g id="Layer_4">
+          <polygon stroke-miterlimit="10" points="469.3,222.7 1,222.7 48.7,166.7 155.7,188.3 212,132.7
+          296.7,128 380.7,184.3 436.7,125 	">
+        </g>
+      </g>
+    </defs>
+  </svg>
+  <a href="https://github.com/google/material-design-lite/blob/master/templates/dashboard/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
