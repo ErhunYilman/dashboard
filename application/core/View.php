@@ -174,4 +174,14 @@ class View
     {
         return htmlentities($str, ENT_QUOTES, 'UTF-8');
     }
+
+    public static function getBodyClass($filename)
+    {
+      $split_filename = explode("/", $filename);
+      $active_controller = $split_filename[0];
+
+      if ($active_controller === "login") {
+        return $active_controller . "-bg";
+      }
+    }
 }

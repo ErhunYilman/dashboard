@@ -7,7 +7,7 @@
       <!-- register form -->
       <form method="post" action="<?php echo Config::get('URL'); ?>register/register_action">
         <!-- the user name input field uses a HTML5 pattern check -->
-        <input type="text" pattern="[a-zA-Z0-9,./-]{2,64}" name="user_name" placeholder="Username (letters/numbers/special, min 10 chars)" required />
+        <input type="text" pattern="[a-zA-Z0-9,./!-]{2,64}" name="user_name" placeholder="Username (letters/numbers/special, min 10 chars)" required />
         <div class="outter">
           <div class="inner">
             <input type="text" name="user_email" placeholder="Email address (a valid address)" required />

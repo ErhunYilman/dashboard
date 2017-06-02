@@ -27,5 +27,5 @@
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/style.css?_=<?=md5($date)?>" />
 
 </head>
-<body>
+<body class="<?php echo View::getBodyClass($filename); ?>">
         <!-- logo -->
