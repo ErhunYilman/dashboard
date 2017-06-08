@@ -39,7 +39,7 @@
         </ul>
       </div>
     </header>
-    <nav class="demo-navigation mdl-navigation mdl-color--red-800">
+    <nav class="demo-navigation mdl-navigation ">
       <a class="mdl-navigation__link" <?php if (View::checkForActiveController($filename, "index")) { echo ' class="active" '; } ?>  class="mdl-navigation__link" href="<?php echo Config::get('URL'); ?>index/index"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Index</a>
       <a class="mdl-navigation__link" href=""><i class="material-icons" role="presentation">inbox</i>Inbox</a>
       <a class="mdl-navigation__link" href=""><i class="material-icons" role="presentation">delete</i>Trash</a>

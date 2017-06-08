@@ -180,7 +180,7 @@ class View
       $split_filename = explode("/", $filename);
       $active_controller = $split_filename[0];
 
-      if ($active_controller === "login") {
+      if ($active_controller === "login" OR $active_controller === "register") {
         return $active_controller . "-bg";
       }
     }

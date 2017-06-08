@@ -87,6 +87,9 @@ html, body {
           align-items: center;
   width: 100%;
 }
+.mdl-layout__drawer{
+  background-color: #263238 !important;
+}
 
 .demo-navigation {
   -webkit-box-flex: 1;
@@ -96,7 +99,10 @@ html, body {
 }
 
 .demo-navigation a i{
-  color: #263238 !important;
+  color: #b71c1c !important;
+}
+.mdl-navigation{
+  background-color: #37474f;
 }
 .demo-layout .demo-navigation .mdl-navigation__link {
   display: -webkit-box !important;
