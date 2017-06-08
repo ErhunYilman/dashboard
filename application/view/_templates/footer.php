@@ -1,15 +1,3 @@
-    <!-- jQuery 2.0.2 -->
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> -->
-    <script src="<?php echo Config::get('URL'); ?>js/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <!-- jQuery UI 1.10.3 -->
-    <script src="<?php echo Config::get('URL'); ?>js/jquery-ui-1.12.1.min.js" type="text/javascript"></script>
-    <!-- script -->
-    <script src="<?php echo Config::get('URL'); ?>js/script.js" type="text/javascript"></script>
-
-    <script src="<?php echo Config::get('URL'); ?>js/material.min.js" type="text/javascript"></script>
-  </body>
-</html>
-<!-- navigation -->
 <ul class="navigation">
     <li <?php if (View::checkForActiveController($filename, "index")) { echo ' class="active" '; } ?> >
         <a href="<?php echo Config::get('URL'); ?>index/index">Index</a>
@@ -75,3 +63,17 @@
 
     <!-- the support button on the top right -->
     <a class="support-button" href="https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579" target="_blank"></a>
+  </div>
+</main>
+    <!-- jQuery 2.0.2 -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> -->
+    <script src="<?php echo Config::get('URL'); ?>js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <!-- jQuery UI 1.10.3 -->
+    <script src="<?php echo Config::get('URL'); ?>js/jquery-ui-1.12.1.min.js" type="text/javascript"></script>
+    <!-- script -->
+    <script src="<?php echo Config::get('URL'); ?>js/script.js" type="text/javascript"></script>
+
+    <script src="<?php echo Config::get('URL'); ?>js/material.min.js" type="text/javascript"></script>
+  </body>
+</html>
+<!-- navigation -->
