@@ -269,7 +269,9 @@ input.submit-button:hover{
   background-color: #37474f;
 }
 
-
+.register-bg{
+  background-color: #37474f;
+}
 /*#view-source {
   position: fixed;
   display: block;
