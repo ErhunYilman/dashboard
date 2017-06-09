@@ -29,7 +29,7 @@
 </head>
 <body class="<?php echo View::getBodyClass($filename); ?>">
   <?php
-    if (($_SERVER['REQUEST_URI'] == '/uFlyProject/login/index') OR ($_SERVER['REQUEST_URI'] == '/uFlyProject/register/index')) {
+    if (($_SERVER['REQUEST_URI'] == '/uFlyProject/') OR ($_SERVER['REQUEST_URI'] == '/uFlyProject/register/index') OR ($_SERVER['REQUEST_URI'] == '/uFlyProject/login/index') OR ($_SERVER['REQUEST_URI'] == '/uFlyProject/') OR ($_SERVER['REQUEST_URI'] == '/uFlyProject/index/index') ) {
         } else { ?>
   <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">

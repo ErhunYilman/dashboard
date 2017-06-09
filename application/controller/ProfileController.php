@@ -16,9 +16,13 @@ class ProfileController extends Controller
      */
     public function index()
     {
+      if (LoginModel::isUserLoggedIn()) {
         $this->View->render('profile/index', array(
             'users' => UserModel::getPublicProfilesOfAllUsers())
         );
+      } else {
+        Redirect::home();
+      }
     }
 
     /**
