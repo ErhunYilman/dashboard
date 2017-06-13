@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Controller
+class IndexController extends SecureController
 {
     /**
      * Construct this object by extending the basic Controller class
@@ -16,11 +16,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        if (LoginModel::isUserLoggedIn()) {
-            $this->View->render('dashboard/index');
-        } else {
-          $this->View->render('login/index');
-        }
+        $this->View->render('index/index');
+      }
 
-    }
 }

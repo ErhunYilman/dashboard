@@ -8,6 +8,8 @@ class ProfileController extends Controller
     public function __construct()
     {
         parent::__construct();
+
+        Auth::checkAuthentication();
     }
 
     /**
@@ -16,13 +18,10 @@ class ProfileController extends Controller
      */
     public function index()
     {
-      if (LoginModel::isUserLoggedIn()) {
+
         $this->View->render('profile/index', array(
             'users' => UserModel::getPublicProfilesOfAllUsers())
         );
-      } else {
-        Redirect::home();
-      }
     }
 
     /**
