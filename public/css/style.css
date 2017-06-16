@@ -272,6 +272,9 @@ input.submit-button:hover{
 .register-bg{
   background-color: #37474f;
 }
+.logout{
+  text-transform: uppercase;
+}
 /*#view-source {
   position: fixed;
   display: block;

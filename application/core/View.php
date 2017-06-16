@@ -184,4 +184,47 @@ class View
         return $active_controller . "-bg";
       }
     }
+
+    public static function getTimeOfDay($message)
+    {
+      $daypart = date("H");
+
+      if($daypart >= 6 && $daypart < 12){
+    		$message = "Goedemorgen";
+    		// nacht
+    	}
+    	elseif ($daypart >= 12 && $daypart < 18) {
+    		$message = "Goedemiddag";
+    		// ochtend
+    	}
+    	 elseif ($daypart >= 18 && $daypart < 24) {
+    		$message = "Goedeavond";
+    		// middag
+    	}
+    	 else{
+    		$message = "Goedenacht";
+    		//avond
+    	}
+    }
+
+    public static function getHeaderTitle($headerTitle)
+    {
+    if ( $_SERVER['REQUEST_URI'] == '/uFlyProject/index/index') {
+
+        $headerTitle = "Home";
+
+      }
+
+    elseif ( $_SERVER['REQUEST_URI'] == '/uFlyProject/profile/index') {
+
+        $headerTitle = "Profiel";
+      }
+
+
+    elseif ( $_SERVER['REQUEST_URI'] == '/uFlyProject/dashboard/index') {
+
+        $headerTitle = "Dashboard";
+
+      }
+    }
 }

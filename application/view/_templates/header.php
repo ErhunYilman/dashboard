@@ -34,7 +34,7 @@
   <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Home</span>
+        <span class="mdl-layout-title"> <?php  ?></span>
         <div class="mdl-layout-spacer"></div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
           <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
@@ -50,7 +50,7 @@
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
                 <li <?php if (View::checkForActiveController($filename, "login")) { echo ' class="active" '; } ?> >
-                    <a href="<?php echo Config::get('URL'); ?>login/logout">Logout</a>
+                    <a class="mdl-menu__item" href="<?php echo Config::get('URL'); ?>node/index">My notes</a>
                 </li>
         </ul>
       </div>
@@ -63,7 +63,7 @@
           <img class="demo-avatar" src='<?= Session::get('user_avatar_file'); ?>' />
           <?php } ?>
         <div class="demo-avatar-dropdown">
-          <a href="<?php echo Config::get('URL'); ?>profile/showProfile"><?= Session::get('user_name') ?></a>
+          <p> <?php //echo View::getTimeOfDay($message) ?> </p><a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><?= Session::get('user_name') ?></a>
           <div class="mdl-layout-spacer"></div>
           <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
             <i class="material-icons" role="presentation">arrow_drop_down</i>
@@ -84,6 +84,7 @@
         <a class="mdl-navigation__link <?php if (View::checkForActiveController($filename, "dashboard")) { echo ' active" '; } ?>" href="<?= Config::get('URL') ?>dashboard/index"><i class="material-icons" role="presentation">delete</i>Dashboard</a>
         <div class="mdl-layout-spacer"></div>
         <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+        <a class="mdl-navigation__link logout" href="<?php echo Config::get('URL'); ?>login/logout">Logout</a>
       </nav>
     </div>
     <main class="mdl-layout__content mdl-color--grey-100">
