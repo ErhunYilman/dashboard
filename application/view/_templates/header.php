@@ -5,7 +5,7 @@
   $now = new DateTime();
   $date = $now->getTimestamp();
    ?>
-    <title>uFly</title>
+    <title>profiel</title>
     <!-- META -->
     <meta charset="utf-8">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
