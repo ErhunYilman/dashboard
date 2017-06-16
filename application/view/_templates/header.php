@@ -49,9 +49,9 @@
           <i class="material-icons">more_vert</i>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-          <li class="mdl-menu__item">About</li>
-          <li class="mdl-menu__item">Contact</li>
-          <li class="mdl-menu__item">Legal information</li>
+                <li <?php if (View::checkForActiveController($filename, "login")) { echo ' class="active" '; } ?> >
+                    <a href="<?php echo Config::get('URL'); ?>login/logout">Logout</a>
+                </li>
         </ul>
       </div>
     </header>
@@ -63,14 +63,18 @@
           <img class="demo-avatar" src='<?= Session::get('user_avatar_file'); ?>' />
           <?php } ?>
         <div class="demo-avatar-dropdown">
-          <span><?= Session::get('user_name') ?></span>
+          <a href="<?php echo Config::get('URL'); ?>profile/showProfile"><?= Session::get('user_name') ?></a>
           <div class="mdl-layout-spacer"></div>
           <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
             <i class="material-icons" role="presentation">arrow_drop_down</i>
             <span class="visuallyhidden">Accounts</span>
           </button>
           <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-            <li class="mdl-menu__item"><?= Session::get('user_email') ?></li>
+            <li><a class="mdl-menu__item" href="<?= Config::get('URL') ?>user/changeUserRole">Cange account type</a></li>
+            <li><a class="mdl-menu__item" href="<?= Config::get('URL') ?>user/editAvatar">Edit your avatar</a></li>
+            <li><a class="mdl-menu__item" href="<?= Config::get('URL') ?>user/editusername">Edit my user name</a></li>
+            <li><a class="mdl-menu__item" href="<?= Config::get('URL') ?>user/edituseremail">Edit my email</a></li>
+            <li><a class="mdl-menu__item" href="<?= Config::get('URL') ?>user/changePassword">Change Password</a></li>
           </ul>
         </div>
       </header>
