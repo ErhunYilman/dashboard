@@ -185,6 +185,7 @@ class View
       }
     }
 
+    //incomplete
     public static function getTimeOfDay($message)
     {
       $daypart = date("H");
@@ -207,6 +208,7 @@ class View
     	}
     }
 
+    //incomplete
     public static function getHeaderTitle($headerTitle)
     {
     if ( $_SERVER['REQUEST_URI'] == '/uFlyProject/index/index') {

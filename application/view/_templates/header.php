@@ -34,7 +34,7 @@
   <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title"> <?php  ?></span>
+        <span class="mdl-layout-title"> <?php //incomplete ?></span>
         <div class="mdl-layout-spacer"></div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
           <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
@@ -63,7 +63,7 @@
           <img class="demo-avatar" src='<?= Session::get('user_avatar_file'); ?>' />
           <?php } ?>
         <div class="demo-avatar-dropdown">
-          <p> <?php //echo View::getTimeOfDay($message) ?> </p><a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><?= Session::get('user_name') ?></a>
+          <p> <?php //incomplete //echo View::getTimeOfDay($message) ?> </p><a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><?= Session::get('user_name') ?></a>
           <div class="mdl-layout-spacer"></div>
           <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
             <i class="material-icons" role="presentation">arrow_drop_down</i>
