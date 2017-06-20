@@ -211,22 +211,22 @@ class View
     //incomplete
     public static function getHeaderTitle($headerTitle)
     {
-    if ( $_SERVER['REQUEST_URI'] == '/uFlyProject/index/index') {
+      if ( $_SERVER['REQUEST_URI'] == '/uFlyProject/index/index') {
 
-        $headerTitle = "Home";
+          $headerTitle = "Home";
 
-      }
+        }
 
-    elseif ( $_SERVER['REQUEST_URI'] == '/uFlyProject/profile/index') {
+      elseif ( $_SERVER['REQUEST_URI'] == '/uFlyProject/profile/index') {
 
-        $headerTitle = "Profiel";
-      }
+          $headerTitle = "Profiel";
+        }
 
 
-    elseif ( $_SERVER['REQUEST_URI'] == '/uFlyProject/dashboard/index') {
+      elseif ( $_SERVER['REQUEST_URI'] == '/uFlyProject/dashboard/index') {
 
-        $headerTitle = "Dashboard";
+          $headerTitle = "Dashboard";
 
-      }
+        }
     }
 }

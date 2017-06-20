@@ -34,7 +34,7 @@
   <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title"> <?php //incomplete ?></span>
+        <span id="greeting"class="mdl-layout-title ">Home</span>
         <div class="mdl-layout-spacer"></div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
           <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
@@ -49,9 +49,9 @@
           <i class="material-icons">more_vert</i>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-                <li <?php if (View::checkForActiveController($filename, "login")) { echo ' class="active" '; } ?> >
-                    <a class="mdl-menu__item" href="<?php echo Config::get('URL'); ?>node/index">My notes</a>
-                </li>
+          <li <?php if (View::checkForActiveController($filename, "login")) { echo ' class="active" '; } ?> >
+              <a class="mdl-menu__item" href="<?php echo Config::get('URL'); ?>node/index">My notes</a>
+          </li>
         </ul>
       </div>
     </header>
@@ -63,7 +63,7 @@
           <img class="demo-avatar" src='<?= Session::get('user_avatar_file'); ?>' />
           <?php } ?>
         <div class="demo-avatar-dropdown">
-          <p> <?php //incomplete //echo View::getTimeOfDay($message) ?> </p><a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><?= Session::get('user_name') ?></a>
+          <a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><?= Session::get('user_name') ?></a>
           <div class="mdl-layout-spacer"></div>
           <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
             <i class="material-icons" role="presentation">arrow_drop_down</i>
