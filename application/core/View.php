@@ -185,48 +185,42 @@ class View
       }
     }
 
-    //incomplete
-    public static function getTimeOfDay($message)
+
+    public static function getHeaderTitle()
     {
-      $daypart = date("H");
+      $url = Request::get('url');
 
-      if($daypart >= 6 && $daypart < 12){
-    		$message = "Goedemorgen";
-    		// nacht
-    	}
-    	elseif ($daypart >= 12 && $daypart < 18) {
-    		$message = "Goedemiddag";
-    		// ochtend
-    	}
-    	 elseif ($daypart >= 18 && $daypart < 24) {
-    		$message = "Goedeavond";
-    		// middag
-    	}
-    	 else{
-    		$message = "Goedenacht";
-    		//avond
-    	}
-    }
 
-    //incomplete
-    public static function getHeaderTitle($headerTitle)
-    {
-      if ( $_SERVER['REQUEST_URI'] == '/uFlyProject/index/index') {
+      if (HelperUtils::getControllerName() == 'index') {
 
-          $headerTitle = "Home";
+        return "Home";
 
-        }
+      }
 
-      elseif ( $_SERVER['REQUEST_URI'] == '/uFlyProject/profile/index') {
+      elseif (HelperUtils::getControllerName() == 'profile/index') {
 
-          $headerTitle = "Profiel";
-        }
+        return "Profiel";
 
+      }
 
       elseif ( $_SERVER['REQUEST_URI'] == '/uFlyProject/dashboard/index') {
 
-          $headerTitle = "Dashboard";
+        return "Dashboard";
 
-        }
+      }
+
+      elseif ($_SERVER['REQUEST_URI'] == '/uFlyProject/profile/showProfile/'.Session::get('user_id')) {
+
+        return "Your Profiel";
+
+      }
+
+      elseif ($_SERVER['REQUEST_URI'] == '/uFlyProject/admin') {
+
+      return "Admin";
+
     }
+
+  }
+
 }

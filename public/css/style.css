@@ -266,14 +266,19 @@ input.submit-button:hover{
 }
 
 .login-bg{
-  background-color: #37474f;
+  background-color: #;
 }
 
 .register-bg{
-  background-color: #37474f;
+  background-color: #;
 }
 .logout{
   text-transform: uppercase;
+}
+
+
+.greeting{
+  margin-right: 5px;
 }
 /*#view-source {
   position: fixed;

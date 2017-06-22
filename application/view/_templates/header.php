@@ -15,14 +15,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Favo Icon -->
     <link rel="icon" type="image/png" href="<?php echo Config::get('URL'); ?>favicon.png"/>
-    <!-- bootstrap 3.0.2 -->
-    <link href="<?php echo Config::get('URL'); ?>css/bootstrap.min.css?_=<?=md5($date)?>" rel="stylesheet" type="text/css" />
-    <!-- font Awesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?_=<?=md5($date)?>" rel="stylesheet" type="text/css" />
-    <!-- MaterializeCSS Framework -->
-    <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/material.min.css?_=<?=md5($date)?>">
-    <!-- dashboard style -->
-    <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/dashboard.css?_=<?=md5($date)?>">
+
+    <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/bootstrap.min.css?_=<?=md5($date)?>" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/material-dashboard.css?_=<?=md5($date)?>">
 
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/style.css?_=<?=md5($date)?>" />
 
@@ -31,62 +27,76 @@
   <?php
     if (Session::userIsLoggedIn()) {
   ?>
-  <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-    <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
-      <div class="mdl-layout__header-row">
-        <span id="greeting"class="mdl-layout-title ">Home</span>
-        <div class="mdl-layout-spacer"></div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-          <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-            <i class="material-icons">search</i>
-          </label>
-          <div class="mdl-textfield__expandable-holder">
-            <input class="mdl-textfield__input" type="text" id="search">
-            <label class="mdl-textfield__label" for="search">Enter your query...</label>
-          </div>
-        </div>
-        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
-          <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-          <li <?php if (View::checkForActiveController($filename, "login")) { echo ' class="active" '; } ?> >
-              <a class="mdl-menu__item" href="<?php echo Config::get('URL'); ?>node/index">My notes</a>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <div class="demo-drawer mdl-layout__drawer mdl-color--red-900 mdl-color-text--blue-grey-50">
-      <header class="demo-drawer-header">
-    <?php if (Config::get('USE_GRAVATAR')) { ?>
-          <img class="demo-avatar" src='<?= Session::get('user_gravatar_image_url'); ?>' />
-          <?php } else { ?>
-          <img class="demo-avatar" src='<?= Session::get('user_avatar_file'); ?>' />
-          <?php } ?>
-        <div class="demo-avatar-dropdown">
-          <a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><?= Session::get('user_name') ?></a>
-          <div class="mdl-layout-spacer"></div>
-          <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">arrow_drop_down</i>
-            <span class="visuallyhidden">Accounts</span>
-          </button>
-          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-            <li><a class="mdl-menu__item" href="<?= Config::get('URL') ?>user/changeUserRole">Cange account type</a></li>
-            <li><a class="mdl-menu__item" href="<?= Config::get('URL') ?>user/editAvatar">Edit your avatar</a></li>
-            <li><a class="mdl-menu__item" href="<?= Config::get('URL') ?>user/editusername">Edit my user name</a></li>
-            <li><a class="mdl-menu__item" href="<?= Config::get('URL') ?>user/edituseremail">Edit my email</a></li>
-            <li><a class="mdl-menu__item" href="<?= Config::get('URL') ?>user/changePassword">Change Password</a></li>
-          </ul>
-        </div>
-      </header>
-      <nav class="demo-navigation mdl-navigation ">
-        <a class="mdl-navigation__link <?php if (View::checkForActiveController($filename, "index")) { echo ' active" '; } ?>" href="<?= Config::get('URL') ?>index/index"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-        <a class="mdl-navigation__link <?php if (View::checkForActiveController($filename, "profile")) { echo ' active" '; } ?>" href="<?= Config::get('URL') ?>profile/index"><i class="material-icons" role="presentation">inbox</i>Profiel</a>
-        <a class="mdl-navigation__link <?php if (View::checkForActiveController($filename, "dashboard")) { echo ' active" '; } ?>" href="<?= Config::get('URL') ?>dashboard/index"><i class="material-icons" role="presentation">delete</i>Dashboard</a>
-        <div class="mdl-layout-spacer"></div>
-        <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
-        <a class="mdl-navigation__link logout" href="<?php echo Config::get('URL'); ?>login/logout">Logout</a>
-      </nav>
-    </div>
-    <main class="mdl-layout__content mdl-color--grey-100">
-      <div class="mdl-grid demo-content">
-      <?php } ?>
+  <div class="wrapper">
+	    <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+			<div class="logo">
+				<span class="greeting"></span><a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><?= Session::get('user_name') ?></a>
+			</div>
+    	<div class="sidebar-wrapper">
+            <ul class="nav">
+                <li class="<?php if (View::checkForActiveController($filename, "index")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>index/index"><i class="material-icons">home</i><p>Home</p></a></li>
+                <li class="<?php if (View::checkForActiveController($filename, "profile")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>profile/index"><i class="material-icons">person</i><p>Profile</p></a></li>
+                <li class="<?php if (View::checkForActiveController($filename, "dashboard")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>dashboard/index"><i class="material-icons">dashboard</i><p>Dashboard</p></a></li>
+            </ul>
+    	</div>
+	    </div>
+
+	    <div class="main-panel">
+			<nav class="navbar navbar-transparent navbar-absolute">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><?php echo View::getHeaderTitle(); ?></a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="material-icons">dashboard</i>
+									<p class="hidden-lg hidden-md">Dashboard</p>
+								</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="material-icons">notifications</i>
+									<span class="notification">5</span>
+									<p class="hidden-lg hidden-md">Notifications</p>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Mike John responded to your email</a></li>
+									<li><a href="#">You have 5 new tasks</a></li>
+									<li><a href="#">You're now friend with Andrew</a></li>
+									<li><a href="#">Another Notification</a></li>
+									<li><a href="#">Another One</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+	 							   <i class="material-icons">person</i>
+	 							   <p class="hidden-lg hidden-md">Profile</p>
+		 						</a>
+							</li>
+						</ul>
+
+						<form class="navbar-form navbar-right" role="search">
+							<div class="form-group  is-empty">
+								<input type="text" class="form-control" placeholder="Search">
+								<span class="material-input"></span>
+							</div>
+							<button type="submit" class="btn btn-white btn-round btn-just-icon">
+								<i class="material-icons">search</i><div class="ripple-container"></div>
+							</button>
+						</form>
+					</div>
+				</div>
+			</nav>
+			<div class="content">
+				<div class="container-fluid">
+
+
+  <?php } ?>

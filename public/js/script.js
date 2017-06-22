@@ -20,9 +20,9 @@ $(document).ready(function(){
     message = "Goedenacht";
   }
 
-  document.getElementById('greeting').innerHTML = message;
+$(".greeting" ).append(message);
 
-  var timeOut = setTimeout(DayTimeFuc, 1000);
+  // var timeOut = setTimeout(DayTimeFuc, 1000);
 
 }
 
