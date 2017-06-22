@@ -13,6 +13,8 @@ $date = $now->getTimestamp();
     <script src="<?php echo Config::get('URL'); ?>js/material-dashboard.js?_=<?=md5($date)?>" type="text/javascript"></script>
 
     <script src="<?php echo Config::get('URL'); ?>js/script.js?_=<?=md5($date)?>" type="text/javascript"></script>
+    
+    <script src="<?php echo Config::get('URL'); ?>js/dropzone.min.js?_=<?=md5($date)?>" type="text/javascript"></script>
 
 
 

@@ -22,6 +22,8 @@
 
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/style.css?_=<?=md5($date)?>" />
 
+    <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/dropzone.css?_=<?=md5($date)?>" />	
+
 </head>
 <body class="<?php echo View::getBodyClass($filename); ?>">
   <?php
