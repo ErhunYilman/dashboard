@@ -197,13 +197,13 @@ class View
 
       }
 
-      elseif (HelperUtils::getControllerName() == 'profile/index') {
+      elseif ($_SERVER['REQUEST_URI']  == '/uFlyProject/profile/index') {
 
-        return "Profiel";
+        return "Profile";
 
       }
 
-      elseif ( $_SERVER['REQUEST_URI'] == '/uFlyProject/dashboard/index') {
+      elseif (HelperUtils::getControllerName() == 'dashboard') {
 
         return "Dashboard";
 
@@ -215,7 +215,7 @@ class View
 
       }
 
-      elseif ($_SERVER['REQUEST_URI'] == '/uFlyProject/admin') {
+      elseif (HelperUtils::getControllerName() == 'admin') {
 
       return "Admin";
 

@@ -37,7 +37,7 @@ class UserController extends Controller
      */
     public function editUsername()
     {
-        $this->View->render('user/editUsername');
+        $this->View->render('profile/showProfile/'.Session::get('user_id'));
     }
 
     /**
@@ -53,7 +53,7 @@ class UserController extends Controller
         }
 
         UserModel::editUserName(Request::post('user_name'));
-        Redirect::to('user/editUsername');
+        Redirect::to('profile/showProfile/'.Session::get('user_id'));
     }
 
     /**
@@ -61,7 +61,7 @@ class UserController extends Controller
      */
     public function editUserEmail()
     {
-        $this->View->render('user/editUserEmail');
+        $this->View->render('profile/showProfile/'.Session::get('user_id'));
     }
 
     /**
@@ -71,7 +71,7 @@ class UserController extends Controller
     public function editUserEmail_action()
     {
         UserModel::editUserEmail(Request::post('user_email'));
-        Redirect::to('user/editUserEmail');
+        Redirect::to('profile/showProfile/'.Session::get('user_id'));
     }
 
     /**

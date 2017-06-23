@@ -551,10 +551,7 @@ h2.title {
 }
 .sidebar .logo .simple-text,
 .off-canvas-sidebar .logo .simple-text {
-  text-transform: uppercase;
-  padding: 5px 0px;
-  display: block;
-  font-size: 18px;
+  font-size: 12px
   color: #3C4858;
   text-align: center;
   font-weight: 400;

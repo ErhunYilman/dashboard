@@ -1,41 +1,79 @@
-<div class="container">
-    <h1>ProfileController/showProfile/:id</h1>
-    <div class="box">
-
-        <!-- echo out the system feedback (error and success messages) -->
-        <?php $this->renderFeedbackMessages(); ?>
-
-        <h3>What happens here ?</h3>
-        <div>This controller/action/view shows all public information about a certain user.</div>
-
-        <?php if ($this->user) { ?>
-            <div>
-                <table class="overview-table">
-                    <thead>
-                    <tr>
-                        <td>Id</td>
-                        <td>Avatar</td>
-                        <td>Username</td>
-                        <td>User's email</td>
-                        <td>Activated ?</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="<?= ($this->user->user_active == 0 ? 'inactive' : 'active'); ?>">
-                            <td><?= $this->user->user_id; ?></td>
-                            <td class="avatar">
-                                <?php if (isset($this->user->user_avatar_link)) { ?>
-                                    <img src="<?= $this->user->user_avatar_link; ?>" />
-                                <?php } ?>
-                            </td>
-                            <td><?= $this->user->user_name; ?></td>
-                            <td><?= $this->user->user_email; ?></td>
-                            <td><?= ($this->user->user_active == 0 ? 'No' : 'Yes'); ?></td>
-                        </tr>
-                    </tbody>
-                </table>
+<!-- echo out the system feedback (error and success messages) -->
+<?php $this->renderFeedbackMessages(); ?>
+<div class="row">
+  <div class="col-md-3">
+      <div class="card card-profile">
+        <div class="card-avatar">
+          <a href="#pablo">
+            <?php if (isset($this->user->user_avatar_link)) { ?>
+                <img class="img" src="<?= $this->user->user_avatar_link; ?>" />
+            <?php } ?>
+          </a>
+        </div>
+        <div class="content">
+          <h6 class="category text-gray"><?= $this->user->user_email; ?></h6>
+          <h4 class="card-title"><?= $this->user->user_name; ?></h4>
+          <p class="card-content"></p>
+          <a class="btn btn-primary btn-round" href="<?= Config::get('URL') ?>user/editAvatar">Edit your avatar</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="card">
+        <div class="card-header" data-background-color="purple">
+          <h4 class="title">Edit Profile</h4>
+          <p class="category">Make it your own</p>
+        </div>
+        <div class="card-content">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group label-floating is-empty">
+                <form action="<?php echo Config::get('URL'); ?>user/editUserName_action" method="post">
+                  <!-- btw http://stackoverflow.com/questions/774054/should-i-put-input-tag-inside-label-tag -->
+                  <label class="control-label">New username:</label>
+                  <input class="form-control" type="text" name="user_name" required />
+                  <!-- set CSRF token at the end of the form -->
+                  <input type="hidden" name="csrf_token" value="<?= Csrf::makeToken(); ?>" />
+                  <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
+                </form>
+              </div>
             </div>
-        <?php } ?>
-
+            <div class="col-md-6">
+              <div class="form-group label-floating is-empty">
+                <form action="<?php echo Config::get('URL'); ?>user/editUserEmail_action" method="post">
+                  <label class="control-label">New email address</label>
+                  <input class="form-control" type="text" name="user_email" required />
+                  <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <form method="post" action="<?php echo Config::get('URL'); ?>user/changePassword_action" name="new_password_form">
+                <div class="col-md-4">
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label" for="change_input_password_current">Enter Current Password:</label>
+                    <input class="form-control" id="change_input_password_current" class="reset_input" type='password' name='user_password_current' pattern=".{6,}" required autocomplete="off"  />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label" for="change_input_password_new">New password (min. 6)</label>
+                    <input class="form-control" id="change_input_password_new" class="reset_input" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" /></p>
+                  </div>
+                </div>
+                <div class="col-md-4" style="padding-right: 20px;">
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label" for="change_input_password_repeat">Repeat new password</label>
+                    <input class="form-control" id="change_input_password_repeat" class="reset_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
+                    <button class="btn btn-primary" type="submit"  name="submit_new_password" value="Submit new password">Submit</button>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 </div>

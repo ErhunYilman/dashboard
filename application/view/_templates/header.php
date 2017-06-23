@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/style.css?_=<?=md5($date)?>" />
 
-    <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/dropzone.css?_=<?=md5($date)?>" />	
+    <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/dropzone.css?_=<?=md5($date)?>" />
 
 </head>
 <body class="<?php echo View::getBodyClass($filename); ?>">
@@ -31,18 +31,17 @@
   ?>
   <div class="wrapper">
 	    <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
-			<div class="logo">
-				<span class="greeting"></span><a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><?= Session::get('user_name') ?></a>
-			</div>
-    	<div class="sidebar-wrapper">
-            <ul class="nav">
-                <li class="<?php if (View::checkForActiveController($filename, "index")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>index/index"><i class="material-icons">home</i><p>Home</p></a></li>
-                <li class="<?php if (View::checkForActiveController($filename, "profile")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>profile/index"><i class="material-icons">person</i><p>Profile</p></a></li>
-                <li class="<?php if (View::checkForActiveController($filename, "dashboard")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>dashboard/index"><i class="material-icons">dashboard</i><p>Dashboard</p></a></li>
-            </ul>
-    	</div>
+  			<div class="logo">
+  				<div class="simple-text"><span class="greeting"></span><a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><?= Session::get('user_name') ?></a></div>
+  			</div>
+      	<div class="sidebar-wrapper">
+          <ul class="nav">
+              <li class="<?php if (View::checkForActiveController($filename, "index")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>index/index"><i class="material-icons">home</i><p>Home</p></a></li>
+              <li class="<?php if (View::checkForActiveController($filename, "profile")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>profile/index"><i class="material-icons">person</i><p>Profile</p></a></li>
+              <li class="<?php if (View::checkForActiveController($filename, "dashboard")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>dashboard/index"><i class="material-icons">dashboard</i><p>Dashboard</p></a></li>
+          </ul>
+      	</div>
 	    </div>
-
 	    <div class="main-panel">
 			<nav class="navbar navbar-transparent navbar-absolute">
 				<div class="container-fluid">
@@ -70,11 +69,11 @@
 									<p class="hidden-lg hidden-md">Notifications</p>
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Mike John responded to your email</a></li>
-									<li><a href="#">You have 5 new tasks</a></li>
-									<li><a href="#">You're now friend with Andrew</a></li>
-									<li><a href="#">Another Notification</a></li>
-									<li><a href="#">Another One</a></li>
+                  <li><a class="" href="<?= Config::get('URL') ?>user/changeUserRole">Cange account type</a></li>
+                  <li><a class="" href="<?= Config::get('URL') ?>user/editAvatar">Edit your avatar</a></li>
+                  <li><a class="" href="<?= Config::get('URL') ?>user/editusername">Edit my user name</a></li>
+                  <li><a class="" href="<?= Config::get('URL') ?>user/edituseremail">Edit my email</a></li>
+                  <li><a class="" href="<?= Config::get('URL') ?>user/changePassword">Change Password</a></li>
 								</ul>
 							</li>
 							<li>
