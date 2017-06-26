@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="card">
-            <div class="card-header" data-background-color="purple">
+            <div class="card-header" data-background-color="red">
                 <h4 class="title">Profiel</h4>
                 <p class="category">Here you can see all user in the system</p>
             </div>

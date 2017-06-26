@@ -135,7 +135,7 @@ class UserController extends Controller
      */
     public function changePassword()
     {
-        $this->View->render('user/changePassword');
+        $this->View->render('profile/showProfile/'.Session::get('user_id'));
     }
 
     /**
@@ -150,8 +150,8 @@ class UserController extends Controller
         );
 
         if($result)
-            Redirect::to('user/index');
+            Redirect::to('profile/showProfile/'.Session::get('user_id'));
         else
-            Redirect::to('user/changePassword');
+            Redirect::to('profile/showProfile/'.Session::get('user_id'));
     }
 }

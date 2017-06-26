@@ -20,7 +20,7 @@
     </div>
     <div class="col-md-9">
       <div class="card">
-        <div class="card-header" data-background-color="purple">
+        <div class="card-header" data-background-color="red">
           <h4 class="title">Edit Profile</h4>
           <p class="category">Make it your own</p>
         </div>

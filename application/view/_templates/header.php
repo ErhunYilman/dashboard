@@ -30,7 +30,7 @@
     if (Session::userIsLoggedIn()) {
   ?>
   <div class="wrapper">
-	    <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+	    <div class="sidebar" data-color="red" data-image="../assets/img/sidebar-1.jpg">
   			<div class="logo">
   				<div class="simple-text"><span class="greeting"></span><a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><?= Session::get('user_name') ?></a></div>
   			</div>
@@ -56,24 +56,15 @@
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav navbar-right">
-							<li>
-								<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-									<i class="material-icons">dashboard</i>
-									<p class="hidden-lg hidden-md">Dashboard</p>
-								</a>
-							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 									<i class="material-icons">notifications</i>
 									<span class="notification">5</span>
 									<p class="hidden-lg hidden-md">Notifications</p>
 								</a>
-								<ul class="dropdown-menu">
-                  <li><a class="" href="<?= Config::get('URL') ?>user/changeUserRole">Cange account type</a></li>
-                  <li><a class="" href="<?= Config::get('URL') ?>user/editAvatar">Edit your avatar</a></li>
-                  <li><a class="" href="<?= Config::get('URL') ?>user/editusername">Edit my user name</a></li>
-                  <li><a class="" href="<?= Config::get('URL') ?>user/edituseremail">Edit my email</a></li>
-                  <li><a class="" href="<?= Config::get('URL') ?>user/changePassword">Change Password</a></li>
+								<ul class="dropdown-menu" data-color="red">
+                  <li><a class="" href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>">Cange account setting</a></li>
+                  <li><a class="" href="<?php echo Config::get('URL') ?>node/index">My notes</a></li>
 								</ul>
 							</li>
 							<li>
