@@ -18,10 +18,12 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        if (Session::get("user_account_type") == 7) {
+          $this->View->render('profile/index', array(
+              'users' => UserModel::getPublicProfilesOfAllUsers())
+          );
+        }
 
-        $this->View->render('profile/index', array(
-            'users' => UserModel::getPublicProfilesOfAllUsers())
-        );
     }
 
     /**

@@ -188,7 +188,7 @@ class View
 
     public static function getHeaderTitle()
     {
-      $url = Request::get('url');
+      // $url = Request::get('url');
 
 
       if (HelperUtils::getControllerName() == 'index') {
