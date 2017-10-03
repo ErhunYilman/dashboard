@@ -1502,7 +1502,7 @@ a {
   color: #f44336;
 }
 a:hover, a:focus {
-  color: #89229b;
+  color: #ca3227;
   text-decoration: none;
 }
 a.text-info:hover, a.text-info:focus {
@@ -1810,7 +1810,7 @@ output {
 }
 .form-group.is-focused .form-control {
   outline: none;
-  background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient(#ef5350, #ef5350), linear-gradient(#D2D2D2, #D2D2D2);
   background-size: 100% 2px, 100% 1px;
   box-shadow: none;
   transition-duration: 0.3s;

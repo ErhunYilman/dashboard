@@ -9,7 +9,7 @@
           </ul>
 
             <input type="text" name="user_name" placeholder="Username or email" required />
-            <input type="password" name="user_password" placeholder="Password" required />
+            <input type="password" name="user_password" placeholder="Password" autocomplete="off" required />
 
              <?php if (!empty($this->redirect)) { ?>
                 <input type="hidden" name="redirect" value="<?php echo $this->encodeHTML($this->redirect); ?>" />

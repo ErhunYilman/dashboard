@@ -39,7 +39,9 @@
               <li class="<?php if (View::checkForActiveController($filename, "index")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>index/index"><i class="material-icons">home</i><p>Home</p></a></li>
               <li class="<?php if (View::checkForActiveController($filename, "profile")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>profile/index"><i class="material-icons">person</i><p>Profile</p></a></li>
               <li class="<?php if (View::checkForActiveController($filename, "dashboard")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>dashboard/index"><i class="material-icons">dashboard</i><p>Dashboard</p></a></li>
+              <li style="position: absolute; bottom:0;"><a href="<?php echo Config::get('URL'); ?>login/logout"><i class="material-icons">highlight_off</i>Logout</a></li>
           </ul>
+
       	</div>
 	    </div>
 	    <div class="main-panel">
@@ -68,10 +70,7 @@
 								</ul>
 							</li>
 							<li>
-								<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-	 							   <i class="material-icons">person</i>
-	 							   <p class="hidden-lg hidden-md">Profile</p>
-		 						</a>
+								<a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><i class="material-icons">person</i></a>
 							</li>
 						</ul>
 
