@@ -41,4 +41,15 @@ class ProfileController extends Controller
             Redirect::home();
         }
     }
+
+    public function getUsers()
+    {
+      $users = UserModel::getPublicProfilesOfAllUsers();
+
+      $response = new Response(json_encode($users));
+      $response->headers->set('Content-Type', 'application/json');
+
+      return $response;
+
+    }
 }
