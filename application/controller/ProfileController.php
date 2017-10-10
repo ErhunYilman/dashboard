@@ -18,10 +18,12 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        if (Session::get("user_account_type") == 7) {
+          $this->View->render('profile/index', array(
+              'users' => UserModel::getPublicProfilesOfAllUsers())
+          );
+        }
 
-        $this->View->render('profile/index', array(
-            'users' => UserModel::getPublicProfilesOfAllUsers())
-        );
     }
 
     /**
@@ -38,5 +40,16 @@ class ProfileController extends Controller
         } else {
             Redirect::home();
         }
+    }
+
+    public function getUsers()
+    {
+      $users = UserModel::getPublicProfilesOfAllUsers();
+
+      $response = new Response(json_encode($users));
+      $response->headers->set('Content-Type', 'application/json');
+
+      return $response;
+
     }
 }
