@@ -22,6 +22,8 @@ class ProfileController extends Controller
           $this->View->render('profile/index', array(
               'users' => UserModel::getPublicProfilesOfAllUsers())
           );
+        }else {
+          $this->View->render('error/404');
         }
 
     }
@@ -33,12 +35,12 @@ class ProfileController extends Controller
      */
     public function showProfile($user_id= null)
     {
-        if (isset($user_id)) {
+        if (isset($user_id) && $user_id == $_SESSION['user_id'] OR Session::get("user_account_type") == 7){
             $this->View->render('profile/showProfile', array(
                 'user' => UserModel::getPublicProfileOfUser($user_id))
             );
         } else {
-            Redirect::home();
+            Redirect::to('profile/showProfile/'.session::get('user_id'));
         }
     }
 

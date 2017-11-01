@@ -30,7 +30,7 @@
     if (Session::userIsLoggedIn()) {
   ?>
   <div class="wrapper">
-	    <div class="sidebar" data-color="red" data-image="../assets/img/sidebar-1.jpg">
+	    <div class="sidebar" data-color="red" data-image="../avatars/sidebar-1.jpg">
   			<div class="logo">
   				<div class="simple-text"><span class="greeting"></span><a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><?= Session::get('user_name') ?></a></div>
   			</div>
@@ -38,9 +38,11 @@
           <ul class="nav">
               <li class="<?php if (View::checkForActiveController($filename, "index")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>index/index"><i class="material-icons">home</i><p>Home</p></a></li>
               <?php
-            if (Session::get("user_account_type") == 7 OR  $_SERVER['REQUEST_URI'] == '/uFlyProject/profile/showProfile/'.Session::get('user_id'))  { ?>
+            if (Session::get("user_account_type") == 7)  { ?>
               <li class="<?php if (View::checkForActiveController($filename, "profile")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>profile/index"><i class="material-icons">person</i><p>Profile</p></a></li>
-            <?php  } ?>
+            <?php  } elseif (Session::get("user_account_type") == 1 ) { ?>
+              <li class="<?php if (View::checkForActiveController($filename, "profile")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') . 'profile/showProfile/' . Session::get('user_id') ?>"><i class="material-icons">person</i><p>Profile</p></a></li>
+            <?php } ?>
               <li class="<?php if (View::checkForActiveController($filename, "dashboard")) { echo ' active" '; } ?>"><a href="<?= Config::get('URL') ?>dashboard/index"><i class="material-icons">dashboard</i><p>Dashboard</p></a></li>
               <li style="position: absolute; bottom:0;"><a href="<?php echo Config::get('URL'); ?>login/logout"><i class="material-icons">highlight_off</i>Logout</a></li>
           </ul>
